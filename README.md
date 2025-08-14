@@ -8,6 +8,6 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ## Ejemplo 1.1
 
-![Salida Ejercicio 1.1](ejemplos/Ejemplo 1/Salida Ejemplo 1.png)
+![Salida Ejercicio 1.1](ejemplos/Ejemplo%201/Salida%20Ejemplo%201.png)
 
 
