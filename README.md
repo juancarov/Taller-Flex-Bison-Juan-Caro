@@ -6,5 +6,8 @@ En este taller, se pone a prueba y se profundiza en lo aprendido en el Capítulo
 
 En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al 1-5) cuyo codígo fuente se puede comprobar en las carpetas adjuntas en este repositorio.
 
-##Ejemplo 1.1
+## Ejemplo 1.1
+
+![Salida Ejercicio 1.1](ejemplos/Ejemplo 1/Salida Ejemplo 1.png)
+
 
