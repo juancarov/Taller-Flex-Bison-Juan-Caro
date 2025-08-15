@@ -12,4 +12,16 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ### Ejemplo 1.2
 
+![Salida Ejercicio 1.2](ejemplos/Ejemplo%202/Salida%20Ejemplo%202.png)
 
+### Ejemplo 1.3
+
+![Salida Ejercicio 1.3](ejemplos/Ejemplo%203/Salida%20Ejemplo%203.png)
+
+### Ejemplo 1.4
+
+![Salida Ejercicio 1.4](ejemplos/Ejemplo%204/Salida%20Ejemplo%204.png)
+
+### Ejemplo 1.5
+
+![Salida Ejercicio 1.5](ejemplos/Ejemplo%205/Salida%20Ejemplo%205.png)
