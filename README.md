@@ -8,20 +8,39 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ### Ejemplo 1.1
 
-![Salida Ejercicio 1.1](ejemplos/Ejemplo%201/Salida%20Ejemplo%201.png)
+![Salida Ejemplo 1.1](ejemplos/Ejemplo%201/Salida%20Ejemplo%201.png)
 
 ### Ejemplo 1.2
 
-![Salida Ejercicio 1.2](ejemplos/Ejemplo%202/Salida%20Ejemplo%202.png)
+![Salida Ejemplo 1.2](ejemplos/Ejemplo%202/Salida%20Ejemplo%202.png)
 
 ### Ejemplo 1.3
 
-![Salida Ejercicio 1.3](ejemplos/Ejemplo%203/Salida%20Ejemplo%203.png)
+![Salida Ejemplo 1.3](ejemplos/Ejemplo%203/Salida%20Ejemplo%203.png)
 
 ### Ejemplo 1.4
 
-![Salida Ejercicio 1.4](ejemplos/Ejemplo%204/Salida%20Ejemplo%204.png)
+![Salida Ejemplo 1.4](ejemplos/Ejemplo%204/Salida%20Ejemplo%204.png)
 
 ### Ejemplo 1.5
 
-![Salida Ejercicio 1.5](ejemplos/Ejemplo%205/Salida%20Ejemplo%205.png)
+![Salida Ejemplo 1.5](ejemplos/Ejemplo%205/Salida%20Ejemplo%205.png)
+
+## Ejercicios
+
+### 1. ¿La calculadora aceptará una línea que contenga solo un cometario?, ¿por qué no?, ¿Sería más fácil corregir esto en el escaner o en el analizador?
+
+### 2. Convierta la calculadora en una calculadora hexadecimal que acepte números hexadecimales y decimales.
+
+### 3. Agregue operadores de nivel bits como AND y OR a las calculadora.
+
+### 4. ¿La versión manuscrita del escáner en el Ejemplo 1-4 reconoce exactamente los mismos tokens que la versión generada por flex?
+
+### 5. ¿Puedes pensar en idiomas para los que flex no sería una buena herramienta para escribir un escaner? 
+
+Principalmente, los idiomas donde Flex no es una buena herramienta para escribir un escáner serían idiomas como mandarín, japonés o coreano, donde la escritura es más compleja debido al uso de kanjis (en japonés), logogramas (Mandarín) y el alfabeto Hangul (Coreano).
+
+Flex, en su implementación clásica, está diseñado para trabajar de forma óptima con conjuntos de caracteres simples como ASCII y con lenguajes que separan tokens por espacios o símbolos claros. En estos idiomas, un solo carácter puede representar una palabra entera o varios morfemas, lo que complica el análisis léxico y requiere soporte Unicode y algoritmos de segmentación más avanzados.
+
+### 6. Reescriba el programa de conteo de palabras en C. Ejecute algunos archivos grandes en ambas versiones. ¿Es la versión C notablemente más rápida?, ¿Fue mucho más dificil de depurar?
+
