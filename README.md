@@ -42,5 +42,7 @@ Principalmente, los idiomas donde Flex no es una buena herramienta para escribir
 
 Flex, en su implementación clásica, está diseñado para trabajar de forma óptima con conjuntos de caracteres simples como ASCII y con lenguajes que separan tokens por espacios o símbolos claros. En estos idiomas, un solo carácter puede representar una palabra entera o varios morfemas, lo que complica el análisis léxico y requiere soporte Unicode y algoritmos de segmentación más avanzados.
 
+![Coreano-Japones-Mandarin](ejercicios/Ejercicio%201/Coreano-Japones-Mandarin.png)
+
 ### 6. Reescriba el programa de conteo de palabras en C. Ejecute algunos archivos grandes en ambas versiones. ¿Es la versión C notablemente más rápida?, ¿Fue mucho más dificil de depurar?
 
