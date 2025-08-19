@@ -42,7 +42,7 @@ En la calculadora modificada se agregó el reconocimiento de números hexadecima
 
 Agregamos '"0x"[0-9a-fA-F]+	{yylval = strtol(yytext, NULL, 16);' con el fin de que el parser reconozca los números que pasen en formato hexadecimal y no los confunda con numeros en base 10.
 
-| Bison Calculadora normal | Bison Calculadora de Bits |
+| Bison Calculadora normal | Bison Calculadora de Hexadecimal |
 |----------|----------|
 | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/Bison1-5.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/BisonE2.png) |
 
@@ -72,7 +72,7 @@ No, la versión manuscrita del escáner en el Ejemplo 1-4 no reconoce exactament
 
 | Escáner Flex | Escáner Escrito a mano  |
 |----------|----------|
-| ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_1-4.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%204/Tokens_HandWritten.png) |
+| ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_1-4.png) | ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_HandWritten.png) |
 
 Con una diferencia en como se establece el token de Division (DIV), ya que en la version de flex simplemente se le asigna el token  262 y en el caso se define como '/', mientras que en el escrito a mano se diferencia de si es un comentario o un solo '/' y se le asigna a DIV si ese es el caso.
 
@@ -87,12 +87,14 @@ Flex, en su implementación clásica, está diseñado para trabajar de forma óp
 
 ### 6. Reescriba el programa de conteo de palabras en C. Ejecute algunos archivos grandes en ambas versiones. ¿Es la versión C notablemente más rápida?, ¿Fue mucho más dificil de depurar?
 
-Al reescribir el programa de conteo de palabras en C puro, se obtuvo un desempeño más rápido en comparación con la versión hecha con Flex. Esto se debe a que en C el programa trabaja directamente con las funciones de bajo nivel de lectura de caracteres, mientras que en Flex existe una capa adicional que genera y procesa las expresiones regulares, lo cual añade cierta sobrecarga.
+Al reescribir el programa de conteo de palabras en C (se encuentra en la caperta ejercicios/Ejercicio 6), se obtuvo un desempeño más rápido en comparación con la versión hecha con Flex. Esto se debe a que en C el programa trabaja directamente con las funciones de bajo nivel de lectura de caracteres, mientras que en Flex existe una capa adicional que genera y procesa las expresiones regulares, lo cual añade cierta sobrecarga.
 
-En cuanto a la depuración, la versión en C fue más sencilla de entender y ajustar, porque todo el control estaba explícito en el código. En cambio, con Flex había que interpretar primero las reglas del escáner generado. En conclusión, la versión en C resultó notablemente más rápida y también más clara de depurar.
+En cuanto a la depuración, la versión en C fue más sencilla de entender y ajustar, porque todo el control estaba explícito en el código. En cambio, con Flex había que interpretar primero las reglas del escáner generado. En conclusión, la versión en C resultó más rápida (aunque por milisegundos solo).
 
 
-| Bison Calculadora normal | Bison Calculadora de Bits |
+| Tiempo de depuración en Flex| Tiempo de depuración en C |
 |----------|----------|
-| ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/Bison1-5.png) | ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/BisonE3.png) |
+| ![Salida Ejercicio 1.6](ejercicios/Ejercicio%206/TiempoFlex.png) | ![Salida Ejercicio 1.6](ejercicios/Ejercicio%206/TiempoC.png) |
+
+Se creó un archivo de texto llamado grande.txt que contiene un texto repetido varias veces para simular un archivo grande y así probar el desempeño de las dos versiones del contador.
 
