@@ -36,6 +36,10 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ### 4. ¿La versión manuscrita del escáner en el Ejemplo 1-4 reconoce exactamente los mismos tokens que la versión generada por flex?
 
+No, la versión manuscrita del escáner en el Ejemplo 1-4 no reconoce exactamente los mismos tokens que la versión generada por Flex. Ambos identifican números, operadores básicos (+, -, *, /), valor absoluto (|) y fin de línea, pero el escáner manual además reconoce explícitamente los paréntesis de apertura y cierre (OP y CP), mientras que el generado con Flex no los contempla. 
+
+
+
 ### 5. ¿Puedes pensar en idiomas para los que flex no sería una buena herramienta para escribir un escaner? 
 
 Principalmente, los idiomas donde Flex no es una buena herramienta para escribir un escáner serían idiomas como mandarín, japonés o coreano, donde la escritura es más compleja debido al uso de kanjis (en japonés), logogramas (Mandarín) y el alfabeto Hangul (Coreano).
