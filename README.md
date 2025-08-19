@@ -30,7 +30,12 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ### 1. ¿La calculadora aceptará una línea que contenga solo un cometario?, ¿por qué no?, ¿Sería más fácil corregir esto en el escaner o en el analizador?
 
+La calculadora no aceptará una línea con solo un comentario, porque en el escáner actual no existe una regla para reconocerlos; cualquier texto distinto de números o operadores se interpreta como caracteres desconocidos y aparece como “Mystery character”. Para corregirlo sería más sencillo hacerlo en el escáner, añadiendo una regla específica que detecte los comentarios y devuelva un EOL, de modo que el parser reciba el fin de línea aunque no haya operaciones.
+
 ### 2. Convierta la calculadora en una calculadora hexadecimal que acepte números hexadecimales y decimales.
+
+En la calculadora modificada se agregó el reconocimiento de números hexadecimales en el analizador léxico, de manera que ahora acepta tanto valores decimales como hexadecimales. En el analizador sintáctico no fue necesario cambiar la gramática, únicamente se ajustó la salida para mostrar cada resultado en los dos formatos: decimal y hexadecimal. De esta forma, la calculadora puede operar indistintamente con ambos sistemas numéricos y presentar el resultado de manera clara.
+
 
 ### 3. Agregue operadores de nivel bits como AND y OR a las calculadora.
 
@@ -38,7 +43,15 @@ Usar | para OR habría requerido distinguir su uso binario (entre dos expresione
 
 | Flex Calculadora normal | Flex Calculadora de Bits |
 |----------|----------|
-| ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_1-4.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%204/Tokens_HandWritten.png) |
+| ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/Flex1-5.png) | ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/flexE3.png) |
+
+Únicamente agregamos la definicion de casos para '&' para AND y '^' para OR, de nuevo, para no tener que construir todo de nuevo al tener '|' para valor absoluto.
+
+| Bison Calculadora normal | Bison Calculadora de Bits |
+|----------|----------|
+| ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/Bison1-5.png) | ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/BisonE3.png) |
+
+Añadimos los tokens AND y OR en la sección de declaraciones, y luego se extiende la gramática para aguegar las operaciones (exp AND factor, exp OR factor, para que las operaciones de bit se usen igual que las aritméticas.
 
 ### 4. ¿La versión manuscrita del escáner en el Ejemplo 1-4 reconoce exactamente los mismos tokens que la versión generada por flex?
 
