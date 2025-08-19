@@ -34,6 +34,12 @@ En este espacio, mostraré las salidas para cada uno de los ejemplos (del 1-1 al
 
 ### 3. Agregue operadores de nivel bits como AND y OR a las calculadora.
 
+Usar | para OR habría requerido distinguir su uso binario (entre dos expresiones) de su uso unario (como operador de valor absoluto), lo cual complica la gramática. Para simplificar, opté por implementar OR con ^, así aproveché que | ya estaba definido como ABS y evité modificar reglas existentes.
+
+| Flex Calculadora normal | Flex Calculadora de Bits |
+|----------|----------|
+| ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_1-4.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%204/Tokens_HandWritten.png) |
+
 ### 4. ¿La versión manuscrita del escáner en el Ejemplo 1-4 reconoce exactamente los mismos tokens que la versión generada por flex?
 
 No, la versión manuscrita del escáner en el Ejemplo 1-4 no reconoce exactamente los mismos tokens que la versión generada por Flex. Ambos identifican números (NUMBER), operadores básicos (+, -, *, /), valor absoluto (|) y fin de línea, pero el escáner manual además reconoce los paréntesis de apertura y cierre (OP y CP), mientras que el generado con Flex no los contempla. 
