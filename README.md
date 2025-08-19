@@ -42,6 +42,8 @@ No, la versión manuscrita del escáner en el Ejemplo 1-4 no reconoce exactament
 |----------|----------|
 | ![Salida Ejercicio 1.4](ejercicios/Ejercicio%204/Tokens_1-4.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%204/Tokens_HandWritten.png) |
 
+Con una diferencia en como se establece el token de Division (DIV), ya que en la version de flex simplemente se le asigna el token  262 y en el caso se define como '/', mientras que en el escrito a mano se diferencia de si es un comentario o un solo '/' y se le asigna a DIV si ese es el caso.
+
 
 ### 5. ¿Puedes pensar en idiomas para los que flex no sería una buena herramienta para escribir un escaner? 
 
