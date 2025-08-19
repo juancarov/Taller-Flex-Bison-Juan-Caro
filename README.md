@@ -36,6 +36,19 @@ La calculadora no aceptará una línea con solo un comentario, porque en el esc�
 
 En la calculadora modificada se agregó el reconocimiento de números hexadecimales en el analizador léxico, de manera que ahora acepta tanto valores decimales como hexadecimales. En el analizador sintáctico no fue necesario cambiar la gramática, únicamente se ajustó la salida para mostrar cada resultado en los dos formatos: decimal y hexadecimal. De esta forma, la calculadora puede operar indistintamente con ambos sistemas numéricos y presentar el resultado de manera clara.
 
+| Flex Calculadora normal | Flex Calculadora Hexadecimal |
+|----------|----------|
+| ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/Flex1-5.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/FlexE2.png) |
+
+Agregamos '"0x"[0-9a-fA-F]+	{yylval = strtol(yytext, NULL, 16);' con el fin de que el parser reconozca los números que pasen en formato hexadecimal y no los confunda con numeros en base 10.
+
+| Bison Calculadora normal | Bison Calculadora de Bits |
+|----------|----------|
+| ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/Bison1-5.png) | ![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/BisonE2.png) |
+
+Se ajusto la salida del resultado, con el fin de que nos muestre tanto el numero en base 10 y luego el numero en hexadecimal.
+
+![Salida Ejercicio 1.2](ejercicios/Ejercicio%202/SalidaE2.png)
 
 ### 3. Agregue operadores de nivel bits como AND y OR a las calculadora.
 
@@ -73,4 +86,13 @@ Flex, en su implementación clásica, está diseñado para trabajar de forma óp
 ![Coreano-Japones-Mandarin](ejercicios/Ejercicio%201/Coreano-Japones-Mandarin.png)
 
 ### 6. Reescriba el programa de conteo de palabras en C. Ejecute algunos archivos grandes en ambas versiones. ¿Es la versión C notablemente más rápida?, ¿Fue mucho más dificil de depurar?
+
+Al reescribir el programa de conteo de palabras en C puro, se obtuvo un desempeño más rápido en comparación con la versión hecha con Flex. Esto se debe a que en C el programa trabaja directamente con las funciones de bajo nivel de lectura de caracteres, mientras que en Flex existe una capa adicional que genera y procesa las expresiones regulares, lo cual añade cierta sobrecarga.
+
+En cuanto a la depuración, la versión en C fue más sencilla de entender y ajustar, porque todo el control estaba explícito en el código. En cambio, con Flex había que interpretar primero las reglas del escáner generado. En conclusión, la versión en C resultó notablemente más rápida y también más clara de depurar.
+
+
+| Bison Calculadora normal | Bison Calculadora de Bits |
+|----------|----------|
+| ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/Bison1-5.png) | ![Salida Ejercicio 1.3](ejercicios/Ejercicio%203/BisonE3.png) |
 
